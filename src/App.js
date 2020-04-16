@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CommentList from './components/CommentList/CommentList';
+import Form from './components/Form/Form';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: ['first']
+    };
+
+    this.addComment = this.addComment.bind(this);
+  }
+
+  addComment(comment) {
+    this.setState({
+      comments: [...this.state.comments, comment]
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Form onSubmit={this.addComment} />
+        <CommentList comments={this.state.comments} />
+      </div>
+    );
+  }
 }
+
+// function App() {
+//   const comments = [
+//     'test1',
+//     'test2',
+//     'test3'
+//   ];
+// }
 
 export default App;

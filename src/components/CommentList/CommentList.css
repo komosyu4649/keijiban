@@ -1,0 +1,19 @@
+ul {
+    padding: 0;
+    margin-top: 4%;
+}
+
+.CommentList-item {
+    margin: 2% auto; 
+    padding: 2%;
+    list-style: none;
+    border: 1px solid #111;
+    width: 60%;
+    color: #111;
+
+}
+
+.CommentList-item:hover {
+    background-color: #fff;
+    color: #111;
+}
