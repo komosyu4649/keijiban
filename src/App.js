@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: ['first']
+      comments: []
     };
 
     this.addComment = this.addComment.bind(this);
@@ -28,13 +28,5 @@ class App extends React.Component {
     );
   }
 }
-
-// function App() {
-//   const comments = [
-//     'test1',
-//     'test2',
-//     'test3'
-//   ];
-// }
 
 export default App;

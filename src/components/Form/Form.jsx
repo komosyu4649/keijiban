@@ -23,7 +23,7 @@ class Form extends React.Component {
     sendBodyToParent() {
         const body = this.state.body.trim();
         if(!body) {
-            alert('nothing!')
+            alert('コメントを入力してください')
             return;
         }
         if(typeof this.props.onSubmit === 'function') {
@@ -45,7 +45,7 @@ class Form extends React.Component {
                     onChange={this.handleChange}>
                 </textarea>
             </div>
-            <Button onClickHandler={this.sendBodyToParent}>comment!</Button>
+            <Button onClickHandler={this.sendBodyToParent}>コメント</Button>
         </div>
     );
 }

@@ -1,15 +1,8 @@
-/* .Form-textarea {
-    margin-bottom: 4%;
-    border: 1px solid #111;
-    width: 60%;
-    margin: 4% auto;
-    height: 200px;
-} */
-
 textarea {
     margin-bottom: 4%;
     border: 1px solid #111;
     width: 60%;
     margin: 4% auto;
     height: 200px;
+    font-size: 18px;
 }
